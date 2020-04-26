@@ -10,7 +10,8 @@ require('laravel-mix-purgecss');
  | file for the application as well as bundling up all the JS files.
  |
  */
-// .js('resources/js/app.js', 'public/js')
-mix.postCss('resources/css/main.css', 'public/css', [
+
+mix.js('resources/js/app.js', 'public/js')
+    .postCss('resources/css/main.css', 'public/css', [
         require('tailwindcss'),
     ]).purgeCss();
